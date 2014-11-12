@@ -158,7 +158,7 @@
 					</section>
 
 					<section>
-						<h1>X < JS Master</h1>
+						<h1>X &lt; JS Master</h1>
 					</section>
 
 					<section>
@@ -293,7 +293,7 @@
 
           <section>
             <h1>Boolean</h1>
-            <h1>Number</h1>
+            <h1>Floating Point Num</h1>
             <h1>String</h1>
             <h1>Symbol</h1>
             <h2>(in ES6)</h2>
@@ -323,6 +323,187 @@
 
           <section>
             <h1>Cool Story, Bro</h1>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>What You Need</h1>
+            <h1>To Know About</h1>
+            <h1><span class="accent">this</span></h1>
+          </section>
+
+          <section>
+            <h1>Reference to</h1>
+            <h1>a Given</h1>
+            <h1>Context</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              var obj = {
+                doAllTheThings: function() {
+                  console.log(this === obj);
+                }
+              };
+              obj.doAllTheThings(); // ???
+            </code></pre>
+          </section>
+
+          <section>
+            <div class="CSSTableGenerator">
+              <table>
+                <tr>
+                  <td>I am an object</td>
+                  <td>My name is 'obj'</td>
+                  <td>My prototype is Object</td>
+                  <td>I have one method</td>
+                  <td>^^ is located at some_hex_value</td>
+                  <td>my return address is &hellip;</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </section>
+
+          <section>
+            <h1>Over at</h1>
+            <h1>some_hex_value</h1>
+          </section>
+          <section>
+            <div class="CSSTableGenerator">
+              <table>
+                <tr>
+                  <td>I am a function</td>
+                  <td>My name is 'doAllTheThings'</td>
+                  <td>My prototype is &hellip;</td>
+                  <td>I take zero arguments</td>
+                  <td>`this` is the memory address of obj</td>
+                  <td>my return address is &hellip;</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </section>
+
+          <section>
+            <pre><code>
+              var obj = {
+                doAllTheThings: function() {
+                  console.log(this === obj);
+                }
+              };
+              obj.doAllTheThings(); // true
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>Seems Reasonable</h1>
+          </section>
+
+          <section>
+            <h1>A Little</h1>
+            <h1>Too Reasonable</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              function funkyFunc() {
+                console.log(this);
+              }
+              funkyFunc(); // ???
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code>
+              function somewhatFunkyFunc() {
+                'use strict';
+                console.log(this);
+              }
+              somewhatFunkyFunc(); // ???
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>Runtime Context</h1>
+          </section>
+
+          <section>
+            <h1>No Reference</h1>
+            <h2>i.e. unbound</h2>
+          </section>
+
+          <section>
+            <h1>Sloppy Mode</h1>
+            <h3>or</h3>
+            <h1>Quirks Mode</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              function funkyFunc() {
+                console.log(this);
+              }
+              funkyFunc(); // window
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code>
+              function somewhatFunkyFunc() {
+                'use strict';
+                console.log(this);
+              }
+              somewhatFunkyFunc(); // ???
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>Strict Mode</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              function somewhatFunkyFunc() {
+                'use strict';
+                console.log(this);
+              }
+              somewhatFunkyFunc(); // undefined
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>Constructors</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              var thisHuh;
+              function MyObject() {
+                thisHuh = this;
+              }
+              var instance = new MyObject();
+              console.log(thisHuh === instance); // ???
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>New</h1>
+            <h4>(simplified)</h4>
+          </section>
+
+          <section>
+            <pre><code>
+              function newOperator(Constr, arrayWithArgs) {
+                var thisValue = Object.create(Constr.prototype);
+                Constr.apply(thisValue, arrayWithArgs);
+                return thisValue;
+              }
+            </code></pre>
+            <small>h/t <a href="http://www.2ality.com/2014/05/this.html">Dr. Axel Rauschmayer</a></small>
           </section>
         </section>
 
