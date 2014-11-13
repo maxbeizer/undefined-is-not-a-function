@@ -144,6 +144,23 @@
 					<section>
 						<h1>It&#39;s Spreading</h1>
 					</section>
+
+          <section>
+            <h1>A Peak</h1>
+            <h1>Under</h1>
+            <h1>the Covers</h1>
+          </section>
+
+          <section>
+            <h1>Better Understanding</h1>
+          </section>
+
+          <section>
+            <h1>Happier</h1>
+            <h3>and</h3>
+            <h1>Faster</h1>
+            <h1>Development</h1>
+          </section>
 				</section>
 
 				<section>
@@ -193,15 +210,15 @@
 						<h1>Will Cover?</h1>
 					</section>
 
-					<section>
-						<h1>What <span class="accent">this</span> Means</h1>
-            <h2>in a specific sense</h2>
-					</section>
-
           <section>
             <h1>Why Types Matter</h1>
             <h1>to JS devs</h1>
           </section>
+
+					<section>
+						<h1>What <span class="accent">this</span> Means</h1>
+            <h2>in a specific sense</h2>
+					</section>
 
           <section>
             <h1>Objects</h1>
@@ -309,7 +326,12 @@
           </section>
 
           <section>
-            <h1>Reference</h1>
+            <h1>NAN</h1>
+            <h1>Infinity</h1>
+          </section>
+
+          <section>
+            <h1>References</h1>
           </section>
 
           <section>
@@ -322,7 +344,319 @@
           </section>
 
           <section>
+            <h1>Arrays are</h1>
+            <h1>Just Objects</h1>
+          </section>
+
+          <section>
             <h1>Cool Story, Bro</h1>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Types</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              var x;
+            </code></pre>
+          </section>
+
+          <section>
+            <div class="CSSTableGenerator">
+              <table>
+                <tr>
+                  <td>My name is x</td>
+                  <td>and &hellip; ?</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+
+            <div>
+              <h2>No Type Info</h2>
+            </div>
+          </section>
+
+          <section>
+            <pre><code>
+              int x;
+            </code></pre>
+            <h2>A Dash of C</h2>
+          </section>
+
+          <section>
+            <h1>JavaScript</h1>
+            <h1>is not</h1>
+            <h1>Type-Safe</h1>
+          </section>
+
+          <section>
+            <h1>Awesome</h1>
+          </section>
+
+          <section>
+            <h1>Except</h1>
+            <h1>When it</h1>
+            <h1>Isn&#39;t</h1>
+          </section>
+
+          <section>
+            <h1><em><a href="https://www.destroyallsoftware.com/talks/wat">WAT</a></em></h1>
+            <h2>by Gary Bernhardt</h2>
+          </section>
+
+          <section>
+            <h1>Our Dear Friend:</h1>
+            <h1>&#43;</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              (num|string) + (num|string); // awesome sauce
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>Adding Other Types</h1>
+          </section>
+
+          <section>
+            <h1>Hilarity Ensues</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              [] + []; // ???
+              [] + {}; // ???
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code>
+              [] + []; // ""
+              [] + {}; // "[object Object]"
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>If input is primitive:</h1>
+            <h1>return it as is</h1>
+          </section>
+
+          <section>
+            <h1>Otherwise,</h1>
+            <h1>input is an object:</h1>
+            <h1>Call obj.valueOf()</h1>
+          </section>
+
+          <section>
+            <h1>If that result</h1>
+            <h1>is a primitive:</h1>
+            <h1>return it</h1>
+          </section>
+
+          <section>
+            <h1>Otherwise</h1>
+            <h1>call obj.toString()</h1>
+          </section>
+          <section>
+            <h1>If the result</h1>
+            <h1>is a primitive:</h1>
+            <h1>return it</h1>
+          </section>
+
+          <section>
+            <h1>Otherwise:</h1>
+            <h1>throw a TypeError</h1>
+          </section>
+
+          <section>
+            <h2>citation:</h2>
+            <h2><a href="http://www.2ality.com/2012/01/object-plus-object.html">Dr. Axel Rauschmayer</a></h2>
+          </section>
+
+          <section>
+            <pre><code>
+              [] + []; ""
+              [] + {}; "[object Object]"
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code>
+              var array = [];
+              array.valueOf() === array; // true, same for object
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code>
+              toString([]); // ""
+              toString({}); // "[object Object]"
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>It Actually</h1>
+            <h1>Gets Weirder</h1>
+            <h1>From Here</h1>
+          </section>
+
+          <section>
+            <h1>Where It Has</h1>
+            <h1>Stung Me</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              var myWeight = '190'; // were only wishing made that so
+              myNum + 50; // more like it
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>+</h1>
+            <h1>Concats</h1>
+            <h1>Strings</h1>
+          </section>
+
+          <section>
+            <h1>Implicit</h1>
+            <h1>String</h1>
+            <h1>Conversion</h1>
+          </section>
+
+          <section>
+            <h1>"19050"</h1>
+            <h3>:sad_trombone:</h3>
+          </section>
+
+          <section>
+            <h1>Or This</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              if(peaceTreaty === 'undefined') {
+                launchZeeMissiles();
+              }
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>Actually Reads</h1>
+            <h1>Pretty Cleanly</h1>
+          </section>
+
+          <section>
+            <h1>Hold Onto</h1>
+            <h1>Your Butts</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              if(typeof peaceTreaty === 'undefined') {
+                launchZeeMissiles();
+              }
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>typeof</h1>
+          </section>
+
+          <section>
+            <h1>Distinguish</h1>
+            <h1>Primitives</h1>
+            <h1>From Each Other</h1>
+            <h1>And Objects</h1>
+          </section>
+
+          <section>
+            <h1>Remember</h1>
+            <h1>NaN ?</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              NaN === NaN; // ???
+            </pre></code>
+          </section>
+
+          <section>
+            <pre><code>
+              NaN === NaN; // false
+            </pre></code>
+          </section>
+
+          <section>
+            <h1>Because</h1>
+            <h1>Of Course</h1>
+          </section>
+
+          <section>
+            <pre><code>
+               isNaN(NaN); // true
+               var mySoCalledNum = Number("90s ftw"); // returns NaN
+               // but not itself NaN
+               isNaN(mySoCalledNum); // true -&gt; implicit conversion
+            </pre></code>
+          </section>
+
+          <section>
+            <h1>How About &hellip;</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              var myBool = 'false';
+              myBool === true; // ???
+              myBool === false; // ???
+            </pre></code>
+          </section>
+
+          <section>
+            <pre><code>
+              var myBool = 'false';
+              myBool === true; // false
+              myBool === false; // false
+            </pre></code>
+          </section>
+
+          <section>
+            <pre><code>
+              var myBool = 'false';
+              if(myBool === false) { // typeof myBool === 'string'
+                partyInTheUSA();
+              } else {
+                theEndIsNigh = true;
+              }
+            </pre></code>
+          </section>
+
+          <section>
+            <h1>In Complex</h1>
+            <h1>Sytems</h1>
+          </section>
+
+          <section>
+            <h1>Conversions</h1>
+            <h1>Can Happen</h1>
+            <h1>Unexpectedly</h1>
+          </section>
+
+          <section>
+            <h1>Types</h1>
+            <h1>Matter</h1>
+            <h1>More</h1>
           </section>
         </section>
 
