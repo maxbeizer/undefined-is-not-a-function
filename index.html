@@ -930,6 +930,23 @@
               // TypeError: Cannot read property 'manDate' of undefined
             </code></pre>
           </section>
+
+          <section>
+            <h1>If You Are</h1>
+            <h1>Doing This</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              undefined = 'anything';
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>You Are</h1>
+            <h1>Doing It</h1>
+            <h1>Wrong</h1>
+          </section>
         </section>
 
         <section>
@@ -981,16 +998,249 @@
               <h2>Stack Overflow</h2>
             </div>
           </section>
+
+          <section>
+            <h1>Drilling Deeper</h1>
+          </section>
+
+          <section>
+            <h1>Consider the Following</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              var smarm = {
+                aString: 'theory',
+                aNum: 42,
+                aBool: true,
+                doFunc: function () {
+                  var a = 'bob';
+                  console.log(this); // smarm
+                  (function () {
+                    console.log(this); // window - 'this' is reset
+                    console.log(a); // 'bob' - still in scope
+                  }());
+                }
+              };
+              smarm.doFunc();
+            </code></pre>
+          </section>
+
+          <section>
+            <div class="CSSTableGenerator">
+              <table>
+                <tr>
+                  <td>Your Object: smarm at abc123</td>
+                  <td>String at 123</td>
+                  <td>Num at 456</td>
+                  <td>Bool at 789</td>
+                  <td>Object at 000</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+
+            <div>
+              <h2>wide-angle</h2>
+            </div>
+          </section>
+
+          <section>
+            <div class="CSSTableGenerator">
+              <table>
+                <tr>
+                  <td>123 String: 'theory'</td>
+                  <td>456 Num: 42.0</td>
+                  <td>789 Bool: true</td>
+                  <td>000 Object: doFunc</td>
+                  <td>smarm is at abc123</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+
+            <div>
+              <h3>A bit closer in</h3>
+              <h3>All reference smarm</h3>
+            </div>
+          </section>
+
+          <section>
+            <div class="CSSTableGenerator">
+              <table>
+                <tr>
+                  <td>Object doFunc</td>
+                  <td>String at eee</td>
+                  <td>Object at fff</td>
+                  <td>smarm is at abc123</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+
+            <div>
+              <h3>Even Closer</h3>
+              <h3>Still referencing smarm</h3>
+            </div>
+          </section>
+
+          <section>
+            <div class="CSSTableGenerator">
+              <table>
+                <tr>
+                  <td>Anon. function at fff</td>
+                  <td>doFunc is at 000</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+
+            <div>
+              <h3>Elbow-Deep</h3>
+              <h3>No reference to smarm</h3>
+            </div>
+          </section>
+
+          <section>
+            <h1>Complete Lack</h1>
+            <h1>of Smarm</h1>
+          </section>
+
+          <section>
+            <h1>Without Reference</h1>
+            <h1>We know Where</h1>
+            <h1>this Goes</h1>
+          </section>
+
+          <section>
+            <h1>A Quick Word</h1>
+            <h1>On Prototypes</h1>
+          </section>
+
+          <section>
+            <h1>Consider</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              var Developer = function() {
+                this.back = 'bad';
+                this.posture = 'worse';
+                this.drinkCoffee = function() {
+                  alert('I am ontop of the world');
+                };
+              };
+            </code></pre>
+          </section>
+
+          <section>
+            <div class="CSSTableGenerator">
+              <table>
+                <tr>
+                  <td>new Developer</td>
+                  <td>String: back</td>
+                  <td>String: posture</td>
+                  <td>Object: drinkCoffee</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+
+            <div>
+              <h2>Repetition of</h2>
+              <h2>Function</h2>
+              <h2>Definition</h2>
+              <h2>Everytime</h2>
+            </div>
+          </section>
+
+          <section>
+            <h1>ETOOMUCHOBJECTSSTUFFS</h1>
+          </section>
+
+          <section>
+            <pre><code>
+              var Developer = function() {
+                this.back = 'bad';
+                this.posture = 'worse';
+              };
+
+              Developer.prototype.drinkCoffee = function() {
+                alert('I am ontop of the world');
+              };
+            </code></pre>
+          </section>
+
+          <section>
+            <div class="CSSTableGenerator">
+              <table>
+                <tr>
+                  <td>new Developer</td>
+                  <td>String: back</td>
+                  <td>String: posture</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+
+            <div>
+              <h2>Function</h2>
+              <h2>Defined</h2>
+              <h2>Once</h2>
+              <h2>in the</h2>
+              <h2>Prototype</h2>
+            </div>
+          </section>
+
+          <section>
+            <h1>Prototypical</h1>
+            <h1>Inheritance</h1>
+          </section>
+
+          <section>
+            <h1>References to</h1>
+            <h1>Related Objects</h1>
+          </section>
+
+          <section>
+            <h1>It&#39;s All</h1>
+            <h1>Just Memory</h1>
+          </section>
+        </section>
+
+        <section>
         </section>
 
 				<section>
 					<h1>Questions?</h1>
 				</section>
-
-				<section>
-					<h1>Image Credits</h1>
-				</section>
-
 			</div>
 		</div>
 
