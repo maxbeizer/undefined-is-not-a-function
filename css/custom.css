@@ -3,7 +3,6 @@
   float: left;
 	margin:0px;padding:0px;
 	width:50%;
-	box-shadow: 10px 10px 5px #888888;
 	border:1px solid #000000;
 
 	-moz-border-radius-bottomleft:0px;
@@ -45,10 +44,6 @@
 	color:#000000;
 }
 
-.CSSTableGenerator tr:last-child td{
-	/*border-width:0px 1px 0px 0px;*/
-}
-
 .CSSTableGenerator tr td:last-child{
 	border-width:0px 0px 0px 0px;
 }
@@ -60,7 +55,6 @@
 .CSSTableGenerator tr:first-child td{
 	border:0px solid #000000;
 	text-align:center;
-	/*border-width:0px 1px 1px 1px;*/
 	font-size:28px;
 	font-weight:bold;
 	color:#000000;
@@ -68,10 +62,6 @@
 
 .CSSTableGenerator tr:first-child td:first-child{
 	border-width:0px 0px 0px 0px;
-}
-
-.CSSTableGenerator tr:first-child td:last-child{
-	/*border-width:0px 1px 0px 1px;*/
 }
 
 table tr td {
@@ -89,4 +79,9 @@ tr.accent-tr td {
 
 .accent {
   color: #bada55;
+}
+
+
+.end-slide {
+  color: black !important;
 }
