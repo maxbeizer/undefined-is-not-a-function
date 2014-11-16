@@ -339,8 +339,8 @@
           </section>
 
           <section>
-            <h1>Null</h1>
-            <h1>Undefined</h1>
+            <h1>null</h1>
+            <h1>undefined</h1>
           </section>
 
           <section>
@@ -413,7 +413,7 @@
 
           <section>
             <h1>JavaScript</h1>
-            <h1>is not</h1>
+            <h1>Is Not</h1>
             <h1>Type-Safe</h1>
           </section>
 
@@ -439,12 +439,12 @@
 
           <section>
             <pre><code>
-              (num|string) + (num|string); // awesome sauce maybe
+              (num|string) + (num|string); // awesome sauce (maybe)
             </code></pre>
           </section>
 
           <section>
-            <h1>Adding Other Types</h1>
+            <h1>Add Other Types</h1>
           </section>
 
           <section>
@@ -543,6 +543,12 @@
 
           <section>
             <h1>+</h1>
+            <h1>Adds</h1>
+            <h1>Numbers</h1>
+          </section>
+
+          <section>
+            <h1>+</h1>
             <h1>Concats</h1>
             <h1>Strings</h1>
           </section>
@@ -551,6 +557,12 @@
             <h1>Implicit</h1>
             <h1>String</h1>
             <h1>Conversion</h1>
+          </section>
+
+          <section>
+            <h1>Casting</h1>
+            <h3>or</h3>
+            <h1>Coercion</h1>
           </section>
 
           <section>
@@ -578,6 +590,11 @@
           <section>
             <h1>Hold Onto</h1>
             <h1>Your Butts</h1>
+          </section>
+
+          <section>
+            <h1>We&#39;re All</h1>
+            <h1>Gonna Die</h1>
           </section>
 
           <section>
@@ -680,7 +697,7 @@
 
           <section data-background="#265389">
             <h1>This</h1>
-            <h2>(mis)understood</h2>
+            <h2><s>mis</s>understood</h2>
           </section>
         </section>
 
@@ -701,10 +718,10 @@
             <pre><code>
               var obj = {
                 doAllTheThings: function() {
-                  console.log(this === obj);
+                  console.log(this);
                 }
               };
-              obj.doAllTheThings(); // ???
+              obj.doAllTheThings() === obj; // ???
             </code></pre>
           </section>
 
@@ -750,10 +767,10 @@
             <pre><code>
               var obj = {
                 doAllTheThings: function() {
-                  console.log(this === obj);
+                  console.log(this);
                 }
               };
-              obj.doAllTheThings(); // true
+              obj.doAllTheThings() === obj; // true
             </code></pre>
           </section>
 
@@ -772,11 +789,7 @@
                 console.log(this);
               }
               funkyFunc(); // ???
-            </code></pre>
-          </section>
 
-          <section>
-            <pre><code>
               function somewhatFunkyFunc() {
                 'use strict';
                 console.log(this);
@@ -810,16 +823,6 @@
           </section>
 
           <section>
-            <pre><code>
-              function somewhatFunkyFunc() {
-                'use strict';
-                console.log(this);
-              }
-              somewhatFunkyFunc(); // ???
-            </code></pre>
-          </section>
-
-          <section>
             <h1>Strict Mode</h1>
           </section>
 
@@ -834,6 +837,23 @@
           </section>
 
           <section>
+            <div class="CSSTableGenerator">
+              <table>
+                <tr>
+                  <td>funkFunc</td>
+                  <td>this?</td>
+                  <td>window, I guess</td>
+                  <td></td>
+                  <td>somewhatFunkyFunc</td>
+                  <td>this?</td>
+                  <td>undefined</td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </section>
+
+          <section>
             <h1>Constructors</h1>
           </section>
 
@@ -843,6 +863,7 @@
               function MyObject() {
                 thisHuh = this;
               }
+
               var instance = new MyObject();
               console.log(thisHuh === instance); // ???
             </code></pre>
@@ -862,6 +883,29 @@
               }
             </code></pre>
             <small>h/t <a href="http://www.2ality.com/2014/05/this.html">Dr. Axel Rauschmayer</a>, again</small>
+          </section>
+
+          <section>
+            <div class="CSSTableGenerator">
+              <table>
+                <tr>
+                  <td>new Constr</td>
+                  <td>this is ^^^</td>
+                  <td>arrayWithArgs</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </section>
+
+          <section>
+            <h1><span class="accent">this</span></h1>
+            <h1>is a reference</h1>
           </section>
 
           <section data-background="#265389">
@@ -905,8 +949,8 @@
           </section>
 
           <section>
-            <h1>harrydunne</h1>
-            <h1>points to</h1>
+            <h1>harryDunne</h1>
+            <h1>Points to</h1>
             <h1>undefined</h1>
           </section>
 
@@ -934,6 +978,23 @@
               underfunded.manDate;
               // TypeError: Cannot read property 'manDate' of undefined
             </code></pre>
+          </section>
+
+          <section>
+            <div class="CSSTableGenerator">
+              <table>
+                <tr>
+                  <td>undefined the value</td>
+                  <td>variables without values point ^^^</td>
+                  <td></td>
+                  <td>null is pretty similar</td>
+                  <td></td>
+                  <td>undefined is also</td>
+                  <td>a global variable</td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
           </section>
 
           <section>
@@ -968,7 +1029,7 @@
                   <td>house methods</td>
                   <td>hold references</td>
                   <td>can vary in memory footprint</td>
-                  <td></td>
+                  <td>(i.e. Array.prototype.push() )</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -1009,7 +1070,8 @@
           </section>
 
           <section>
-            <h1>Consider the Following</h1>
+            <h1>Consider Please</h1>
+            <h1>the Following</h1>
           </section>
 
           <section>
@@ -1061,7 +1123,7 @@
                   <td>456 Num: 42.0</td>
                   <td>789 Bool: true</td>
                   <td>000 Object: doFunc</td>
-                  <td>smarm is at abc123</td>
+                  <td>smarm (this) is at abc123</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -1074,6 +1136,25 @@
               <h3>A bit closer in</h3>
               <h3>All reference smarm</h3>
             </div>
+          </section>
+
+          <section>
+            <pre><code>
+              var smarm = {
+                aString: 'theory',
+                aNum: 42,
+                aBool: true,
+                doFunc: function () {
+                  var a = 'bob';
+                  console.log(this); // smarm
+                  (function () {
+                    console.log(this); // window - 'this' is reset
+                    console.log(a); // 'bob' - still in scope
+                  }());
+                }
+              };
+              smarm.doFunc();
+            </code></pre>
           </section>
 
           <section>
@@ -1100,13 +1181,33 @@
           </section>
 
           <section>
+            <pre><code>
+              var smarm = {
+                aString: 'theory',
+                aNum: 42,
+                aBool: true,
+                doFunc: function () {
+                  var a = 'bob';
+                  console.log(this); // smarm
+                  (function () {
+                    console.log(this); // window - 'this' is reset
+                    console.log(a); // 'bob' - still in scope
+                  }());
+                }
+              };
+              smarm.doFunc();
+            </code></pre>
+          </section>
+
+
+          <section>
             <div class="CSSTableGenerator">
               <table>
                 <tr>
                   <td>Anon. function at fff</td>
-                  <td>doFunc is at 000</td>
-                  <td></td>
-                  <td></td>
+                  <td>return address doFunc 000</td>
+                  <td>this?</td>
+                  <td>this was reset</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -1125,13 +1226,14 @@
 
           <section>
             <h1>Complete Lack</h1>
-            <h1>of Smarm</h1>
+            <h1>of smarm</h1>
           </section>
 
           <section>
-            <h1>Without Reference</h1>
-            <h1>We know Where</h1>
-            <h1>this Goes</h1>
+            <h1>Without</h1>
+            <h1>Reference,</h1>
+            <h1>We Know Where</h1>
+            <h1><span class="accent">this</span> Goes</h1>
           </section>
 
           <section>
@@ -1149,7 +1251,7 @@
                 this.back = 'bad';
                 this.posture = 'worse';
                 this.drinkCoffee = function() {
-                  alert('I am ontop of the world');
+                  alert('I am on top of the world');
                 };
               };
             </code></pre>
@@ -1193,7 +1295,7 @@
               };
 
               Developer.prototype.drinkCoffee = function() {
-                alert('I am ontop of the world');
+                alert('I believe I can fly');
               };
             </code></pre>
           </section>
@@ -1206,8 +1308,8 @@
                   <td>String: back</td>
                   <td>String: posture</td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>Developer.prototype</td>
+                  <td>drinkCoffee is at some_hex</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -1241,7 +1343,8 @@
 
           <section data-background="#265389">
             <h1>It&#39;s All</h1>
-            <h1>Gray and White Lines</h1>
+            <h1>Gray and White</h1>
+            <h1>Lines</h1>
           </section>
         </section>
 
